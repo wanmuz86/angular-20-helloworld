@@ -1,0 +1,7 @@
+<div>
+    <app-add-product></app-add-product>
+    <h4>Product List</h4>
+@for (product of products; track product.id){
+    <app-product-item [currentProduct]="product"></app-product-item>
+}
+</div>

@@ -1,0 +1,12 @@
+<h2>{{name}}</h2>
+<p>The counter between {{min}} and {{max}}</p>
+<h4>{{count}}</h4>
+@if (count == 0){
+    <p class="text-danger">Number cannot be less than {{min}}</p>
+}
+@if (count == 10){
+    <p class="text-danger">Number cannot be more than {{max}}</p>
+}
+<button (click)="increment()" [disabled]="count == min">Increment</button>
+<button (click)="decrement()" [disabled]="count == max">Decrement</button>
+<button (click)="reset()">Reset</button>

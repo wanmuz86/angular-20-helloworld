@@ -1,0 +1,27 @@
+<h1>Hello World</h1>
+<h2>Welcome to my website</h2>
+<p>This is my first Angular website/project</p>
+<p>My name is {{name}} , I am {{age}} years old</p>
+<p>Are you hungry? - {{hungry}}</p>
+<h2>Arrays and operation</h2>
+
+<p>The arrays {{scores}} . They are {{scores.length}} 
+  items in the array. The first item is {{scores[0]}}</p>
+  
+  <h5>Using for to retrieve the content</h5>
+  <ul>
+    <!-- Best practice when working with array, the name should be plural 
+     Best practice when use for - for <singular> of <plural>
+      track -> linked to an unique element in the array, eg score.id
+    -->
+  @for(score of scores; track score){
+    <li>{{score}}</li>
+  }
+  </ul>
+
+  <hr>
+  <h2>Object</h2>
+  <!-- For object I can use . or [""] -->
+  <p>My name is {{info.name}} I live in {{info["location"]}}
+    My profession is {{info.profession}}
+  </p>
