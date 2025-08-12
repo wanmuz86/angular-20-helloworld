@@ -13,7 +13,7 @@ export class Notes {
  age:number = 30;
  hungry:boolean = true;
  // Array of numbers number[]
- scores:number[] = [12,15,17,15,13,10,12];
+ scores:number[] = [12,17,15,13,10];
  info =  {"name":"Muzaffar", "location":"Bandar Utama",
   "profession":"IT Trainer"
  }

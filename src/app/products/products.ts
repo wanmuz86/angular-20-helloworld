@@ -28,4 +28,10 @@ export class Products {
     }
   ]
 
+  handleAddPressed(newProduct:any){
+    // push - add it to the end of the arrray
+    newProduct.id = this.products[this.products.length-1].id +1
+    this.products.push(newProduct);
+  }
+
 }

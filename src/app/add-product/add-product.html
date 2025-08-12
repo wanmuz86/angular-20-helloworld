@@ -1,4 +1,6 @@
 <h3>
-    <input type="text" placeholder="Enter Product Name">
-    <button>Add new Product</button>
+    <!-- Link the input to variable name using ngModel - Two way data binding -->
+    <input type="text" placeholder="Enter Product Name" name="name" [(ngModel)]="name"/>
+    <input type="number" placeholder="Enter Product Price" name="price" [(ngModel)]="price"/>
+    <button (click)="addProduct()">Add new Product</button>
 </h3>
