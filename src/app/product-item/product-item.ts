@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-product-item',
@@ -8,7 +8,11 @@ import { Component, Input } from '@angular/core';
 })
 export class ProductItem {
   @Input() currentProduct:any ;
-
+  @Output() deletePressed = new EventEmitter<number>();
   
+  deleteProduct(){
+    // Call the Event Eminter
+    this.deletePressed.emit(this.currentProduct.id);
+  }
 
 }

@@ -2,5 +2,7 @@
     <div>
         <h4>{{currentProduct.name}}</h4>
         <p>{{currentProduct.price}}</p>
+<!-- Passed up the product id so that later we can remove it with filter -->
+        <button (click)="deleteProduct()">Delete Product</button>
     </div>
 }

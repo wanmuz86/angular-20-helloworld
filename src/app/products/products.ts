@@ -30,8 +30,14 @@ export class Products {
 
   handleAddPressed(newProduct:any){
     // push - add it to the end of the arrray
-    newProduct.id = this.products[this.products.length-1].id +1
+    // ? : -> Ternary operator -> If the products length == 0, id = 1 , else : 
+    newProduct.id = this.products.length === 0 ? 1 : this.products[this.products.length-1].id +1
     this.products.push(newProduct);
+  }
+
+  handleDelete(productId:number){
+    // Delete the item using filter (eq to Java Stream method / filter)
+    this.products = this.products.filter(val=> val.id !== productId);
   }
 
 }

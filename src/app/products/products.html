@@ -1,7 +1,13 @@
 <div>
     <app-add-product (addPressed)="handleAddPressed($event)"></app-add-product>
     <h4>Product List</h4>
+    @if (products.length === 0){
+        <p>No Product available at the moment.</p>
+    }
+    @else {
     @for (product of products; track product.id){
-    <app-product-item [currentProduct]="product"></app-product-item>
+    <app-product-item [currentProduct]="product" 
+    (deletePressed)="handleDelete($event)"></app-product-item>
+    }
 }
 </div>
