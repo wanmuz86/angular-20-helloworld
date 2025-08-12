@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Product } from '../product';
 
 @Component({
   selector: 'app-add-product',
@@ -10,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 export class AddProduct {
   //Pass up data using output
   // <any> refers to the data type that will be passed up
-  @Output() addPressed = new EventEmitter<any>();
+  @Output() addPressed = new EventEmitter<Product>();
 
   name:string = "";
   price:number = 0;
@@ -22,7 +23,7 @@ export class AddProduct {
       and ${this.price}`);
 
     // Create a new Product
-    const newProduct = {"name":this.name, "price":this.price};
+    const newProduct = {"id":0, "name":this.name, "price":this.price};
       // Pass up the data
 
     this.addPressed.emit(newProduct)

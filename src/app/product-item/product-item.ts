@@ -1,13 +1,19 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Product } from '../product';
+import { CurrencyPipe, UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-product-item',
-  imports: [],
+  imports: [UpperCasePipe, CurrencyPipe],
   templateUrl: './product-item.html',
   styleUrl: './product-item.css'
 })
 export class ProductItem {
-  @Input() currentProduct:any ;
+  // ! means -> It WILL BE PASSED through property binding [] 
+  //  It will  NEVER be NULL
+  // ? nullable
+
+  @Input() currentProduct!:Product ;
   @Output() deletePressed = new EventEmitter<number>();
   
   deleteProduct(){

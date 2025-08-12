@@ -1,7 +1,7 @@
 @if (currentProduct){
     <div>
-        <h4>{{currentProduct.name}}</h4>
-        <p>{{currentProduct.price}}</p>
+        <h4>{{currentProduct.name | uppercase}}</h4>
+        <p>{{currentProduct.price | currency:'MYR'}}</p>
 <!-- Passed up the product id so that later we can remove it with filter -->
         <button (click)="deleteProduct()">Delete Product</button>
     </div>
